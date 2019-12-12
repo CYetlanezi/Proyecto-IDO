@@ -17,7 +17,8 @@ def plotTSP(paths, points, num_iters=1):
     for i in paths[0]:
         x.append(points[i][0])
         y.append(points[i][1])
-
+        
+    plt.figure(figsize=(15,15))
     plt.plot(x, y, 'co')
 
     # Set a scale for the arrow heads (there should be a reasonable default for this, WTF?)
@@ -51,8 +52,8 @@ def plotTSP(paths, points, num_iters=1):
                 color = 'g', length_includes_head = True)
 
     #Set axis too slitghtly larger than the set of x and y
-    plt.xlim(min(x)*1.1, max(x)*1.1)
-    plt.ylim(min(y)*1.1, max(y)*1.1)
+    plt.xlim(min(x)-10, max(x)+10)
+    plt.ylim(min(y)-10, max(y)+10)
     plt.show()
 
 def ruta(paths, points, num_iters=1):
